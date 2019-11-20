@@ -12,7 +12,7 @@ function split_pdf($filename, $end_directory = false)
     $source_pdf    = $parser->parseFile('a.pdf');
     $text = $source_pdf->getText();
     $occurence=null;
-    preg_match_all('/[:][ ][R][G]/',$text,$occurence,PREG_PATTERN_ORDER);
+    preg_match_all('/[:][ ][p][x]/',$text,$occurence,PREG_PATTERN_ORDER);
     $end_directory = $end_directory ? $end_directory : './';
 $new_path = preg_replace('/[\/]+/', '/', $end_directory.'/'.substr($filename, 0, strrpos($filename, '/')));
 
